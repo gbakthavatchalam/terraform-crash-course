@@ -52,7 +52,7 @@ module "my_web_alb" {
   name               = "${var.environment.name}-web"
   load_balancer_type = "application"
   vpc_id             = module.my_web_vpc.vpc_id
-  subnets            = my_web_vpc.public_subnets
+  subnets            = module.my_web_vpc.public_subnets
   security_groups    = [module.my_web_security_group.security_group_id]
 
   target_groups = [
