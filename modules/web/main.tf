@@ -20,7 +20,7 @@ module "my_web_vpc" {
 
   name               = "${var.environment.name}-web}"
   cidr               = "${var.environment.network_prefix}.0.0/16"
-  azs                = ["eu-north-1"]
+  azs                = ["us-west-2a"]
   public_subnets     = ["${var.environment.network_prefix}.0.0/16"]
 
   tags = {
