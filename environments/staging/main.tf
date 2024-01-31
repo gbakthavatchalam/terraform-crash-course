@@ -3,7 +3,7 @@ module "staging" {
 
   environment = {
     "name": "staging",
-    "network_prefix": "10.192."
+    "network_prefix": "10.192"
   }
 
   instance_type = "t3.nano"
