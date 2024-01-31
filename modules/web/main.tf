@@ -55,14 +55,14 @@ module "my_web_alb" {
   subnets            = module.my_web_vpc.public_subnets
   security_groups    = [module.my_web_security_group.security_group_id]
 
-  target_groups = [
+  target_groups = {
     web-http = {
       name_prefix      = "web-"
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
     }
-  ]
+  }
 
   listeners = [
     {
