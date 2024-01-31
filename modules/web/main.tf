@@ -41,7 +41,7 @@ module "my_web_asg" {
   target_group_arns   = module.my_web_alb.target_group_arns
   security_groups     = [module.my_web_security_group.security_group_id]
   instance_type       = var.instance_type
-  image_id            = var.ami_id
+  image_id            = data.aws_ami.app_ami.id
 
 }
 
