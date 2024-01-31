@@ -60,7 +60,7 @@ module "my_web_alb" {
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
-      target_id        = aws_instance.this.id
+      target_id        = module.my_web_asg.autoscaling_group_id
     }
   }
 
