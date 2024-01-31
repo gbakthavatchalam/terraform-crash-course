@@ -24,7 +24,7 @@ module "my_web_vpc" {
   azs                = ["eu-north-1"]
   public_subnets     = ["${var.environment.network_prefix}.101.0/16"]
 
-  Tags = {
+  tags = {
     "Name": "Terraform",
     "Environment": var.environment.name
   }
@@ -73,7 +73,7 @@ module "my_web_alb" {
   ]
 
   tags = {
-    Environment = "dev"
+    Environment = var.environment.name
   }
 }
 
