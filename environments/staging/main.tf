@@ -1,5 +1,5 @@
 module "staging" {
-  source = "../modules/web"
+  source = "../../modules/web"
 
   environment = {
     "name": "staging",
