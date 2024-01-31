@@ -46,7 +46,7 @@ module "my_web_asg" {
 
 module "my_web_alb" {
   source  = "terraform-aws-modules/alb/aws"
-  version = "9.4.1"
+  version = "~> 6.0"
 
   name               = "${var.environment.name}-web"
   load_balancer_type = "application"
