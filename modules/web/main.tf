@@ -37,7 +37,7 @@ module "my_web_asg" {
   min_size = var.asg_min
   max_size = var.asg_max
   vpc_zone_identifier = module.my_web_vpc.public_subnets
-  target_group_arns   = module.blog_alb.target_group_arns
+  target_group_arns   = module.my_web_alb.target_group_arns
   security_groups     = [module.my_web_security_group.security_group_id]
   instance_type       = var.instance_type
   image_id            = data.aws_ami.app_ami.id
