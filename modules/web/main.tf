@@ -19,7 +19,6 @@ module "my_web_vpc" {
   version = "5.5.1"
 
   name               = "${var.environment.name}-web}"
-  enable_nat_gateway = true
   cidr               = "${var.environment.network_prefix}.0.0/16"
   azs                = ["eu-north-1"]
   public_subnets     = ["${var.environment.network_prefix}.0.0/16"]
